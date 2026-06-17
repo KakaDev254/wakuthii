@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="container py-5">
+    <div class="row text-center mb-5" data-aos="fade-up">
+        <div class="col-12">
+            <h1 class="display-5 mb-3">Our Waste Management Services</h1>
+            <p class="lead text-muted">Comprehensive environmental solutions for Embu and beyond</p>
+        </div>
+    </div>
+    
+    <div class="row g-4">
+        <!-- Detailed service descriptions - reuse the same card structure from home -->
+        <!-- You can expand with more details, pricing, etc. -->
+        <div class="col-md-6" data-aos="fade-up">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3><i class="fas fa-trash-alt me-2" style="color: #48A111;"></i> Garbage Collection</h3>
+                    <p class="mt-3">Regular waste collection services for residential and commercial clients. We provide scheduled pickups and emergency services as needed.</p>
+                    <h5>Features:</h5>
+                    <ul>
+                        <li>Weekly scheduled pickups</li>
+                        <li>Dedicated bins provided</li>
+                        <li>Bulk waste disposal available</li>
+                        <li>Emergency collection services</li>
+                    </ul>
+                    <p class="mt-3"><strong>Price:</strong> From KES 500/month</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3><i class="fas fa-recycle me-2" style="color: #48A111;"></i> Recycling Program</h3>
+                    <p class="mt-3">We sort and recycle plastics, paper, glass, and metals to reduce landfill waste and protect the environment.</p>
+                    <h5>Accepted Items:</h5>
+                    <ul>
+                        <li>Plastic bottles and containers</li>
+                        <li>Cardboard and paper products</li>
+                        <li>Glass bottles and jars</li>
+                        <li>Aluminum and tin cans</li>
+                    </ul>
+                    <p class="mt-3"><strong>Price:</strong> Included in collection fee</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Add more services similarly -->
+    </div>
+</section>
+{% endblock %}

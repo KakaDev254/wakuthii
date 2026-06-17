@@ -1,0 +1,55 @@
+/* static/css/admin.css */
+
+.stat-card {
+    background: #25671E;
+    color: white;
+    padding: 20px;
+    border-radius: 0;
+    height: 100%;
+}
+
+.stat-card i {
+    font-size: 2.5rem;
+    opacity: 0.7;
+}
+
+.stat-card h2 {
+    font-weight: 700;
+}
+
+.stat-card h6 {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
+}
+
+.table th {
+    font-weight: 600;
+    color: #1a1a1a;
+    border-top: none;
+}
+
+.badge {
+    padding: 5px 12px;
+    font-weight: 500;
+}
+
+.btn-group .btn {
+    border-radius: 0 !important;
+}
+
+.pagination .page-link {
+    border-radius: 0 !important;
+}
+
+.modal-content {
+    border-radius: 0 !important;
+}
+
+.form-control {
+    border-radius: 0 !important;
+}
+
+.input-group .btn {
+    border-radius: 0 !important;
+}

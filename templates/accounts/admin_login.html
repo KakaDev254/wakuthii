@@ -1,0 +1,142 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block extra_css %}
+<style>
+    .login-page {
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 0;
+        background: #F8F9FA;
+    }
+    
+    .login-card {
+        background: #FFFFFF;
+        padding: 50px 40px;
+        max-width: 420px;
+        width: 100%;
+        border: 1px solid #e0e0e0;
+        border-radius: 0;
+    }
+    
+    .login-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .login-header .brand-icon {
+        width: 60px;
+        height: 60px;
+        background: #25671E;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.8rem;
+        margin: 0 auto 15px;
+        border-radius: 0;
+    }
+    
+    .login-header h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 5px;
+    }
+    
+    .login-header p {
+        color: #6c757d;
+        font-size: 0.95rem;
+        margin-bottom: 0;
+    }
+    
+    .login-card .form-control {
+        border-radius: 0 !important;
+        border-color: #e0e0e0;
+    }
+    
+    .login-card .form-control:focus {
+        border-color: #25671E;
+        box-shadow: none;
+    }
+    
+    .login-card .btn-primary {
+        background: #25671E;
+        border: none;
+        border-radius: 0;
+        padding: 12px;
+        font-weight: 600;
+        width: 100%;
+        transition: all 0.3s ease;
+    }
+    
+    .login-card .btn-primary:hover {
+        background: #1a4f14;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 15px rgba(37, 103, 30, 0.2);
+    }
+    
+    .login-footer {
+        text-align: center;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #f0f0f0;
+        color: #6c757d;
+        font-size: 0.9rem;
+    }
+    
+    .login-footer a {
+        color: #25671E;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    
+    .login-footer a:hover {
+        color: #1a4f14;
+    }
+    
+    .alert {
+        border-radius: 0 !important;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="login-page">
+    <div class="login-card">
+        <div class="login-header">
+            <div class="brand-icon">W</div>
+            <h2>Admin Login</h2>
+            <p>Access the waste management dashboard</p>
+        </div>
+        
+        <form method="POST">
+            {% csrf_token %}
+            
+            <div class="mb-3">
+                <label for="id_username" class="form-label">Username</label>
+                <input type="text" name="username" id="id_username" class="form-control" placeholder="Enter your username" required autofocus>
+            </div>
+            
+            <div class="mb-3">
+                <label for="id_password" class="form-label">Password</label>
+                <input type="password" name="password" id="id_password" class="form-control" placeholder="Enter your password" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">
+                <i class="fas fa-sign-in-alt"></i> Login
+            </button>
+        </form>
+        
+        <div class="login-footer">
+            <p>Protected area. Admin access only.</p>
+            <p><a href="{% url 'core:home' %}"><i class="fas fa-arrow-left"></i> Back to Home</a></p>
+        </div>
+    </div>
+</div>
+{% endblock %}

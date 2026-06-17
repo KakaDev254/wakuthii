@@ -1,0 +1,125 @@
+/* static/css/base.css - Sharp corners everywhere */
+
+/* Color Variables */
+:root {
+    --primary-dark: #25671E;
+    --primary-light: #48A111;
+    --warning: #F2B50B;
+    --light-bg: #F7F0F0;
+    --white: #FFFFFF;
+    --black: #000000;
+    --dark: #1a1a1a;
+    --gray: #6c757d;
+    --light-gray: #f8f9fa;
+}
+
+/* Global Styles - Remove all border-radius */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F8F9FA;
+    color: var(--dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+    padding-top: 76px;
+}
+
+/* Remove border-radius from all elements */
+img,
+.card,
+.btn,
+.alert,
+.navbar,
+.dropdown-menu,
+.modal-content,
+.list-group-item,
+.form-control,
+.input-group,
+.badge,
+.progress,
+.rounded,
+.rounded-circle,
+.rounded-pill {
+    border-radius: 0 !important;
+}
+
+/* Override Bootstrap border-radius */
+.btn {
+    border-radius: 0 !important;
+}
+
+.card {
+    border-radius: 0 !important;
+}
+
+.form-control {
+    border-radius: 0 !important;
+}
+
+.alert {
+    border-radius: 0 !important;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.text-primary {
+    color: var(--primary-light);
+}
+
+.text-dark {
+    color: var(--primary-dark);
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: var(--primary-light);
+    color: var(--white);
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 0 !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 103, 30, 0.2);
+}
+
+/* Remove any remaining rounded corners */
+.navbar-toggler {
+    border-radius: 0 !important;
+}
+
+.navbar-toggler-icon {
+    border-radius: 0 !important;
+}
+
+.dropdown-menu {
+    border-radius: 0 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding-top: 62px;
+    }
+}

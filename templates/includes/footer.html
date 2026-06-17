@@ -1,0 +1,76 @@
+<!-- templates/includes/footer.html -->
+{% load static %}
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Company Info -->
+            <div class="footer-column">
+                <h4>Wakuthii Waste</h4>
+                <p>Professional garbage collection and waste management services in Embu and across Kenya.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+          <!-- templates/includes/footer.html - Update Quick Links section -->
+<div class="footer-column">
+    <h4>Quick Links</h4>
+    <ul class="footer-links">
+        <li><a href="{% url 'core:home' %}"><i class="fas fa-chevron-right"></i> Home</a></li>
+        <li><a href="{% url 'core:about' %}"><i class="fas fa-chevron-right"></i> About Us</a></li>
+        <li><a href="{% url 'core:services' %}"><i class="fas fa-chevron-right"></i> Our Services</a></li>
+        <li><a href="{% url 'core:contact' %}"><i class="fas fa-chevron-right"></i> Contact</a></li>
+        {% if user.is_authenticated and user.is_superuser or user.is_staff %}
+            <li><a href="{% url 'core:admin_dashboard' %}"><i class="fas fa-chevron-right"></i> Dashboard</a></li>
+        {% else %}
+            <li><a href="{% url 'accounts:admin_login' %}"><i class="fas fa-chevron-right"></i> Admin Login</a></li>
+        {% endif %}
+    </ul>
+</div>
+            
+            <!-- Services -->
+            <div class="footer-column">
+                <h4>Our Services</h4>
+                <ul class="footer-links">
+                    <li><a href="{% url 'core:services' %}"><i class="fas fa-chevron-right"></i> Garbage Collection</a></li>
+                    <li><a href="{% url 'core:services' %}"><i class="fas fa-chevron-right"></i> Recycling Services</a></li>
+                    <li><a href="{% url 'core:services' %}"><i class="fas fa-chevron-right"></i> Commercial Cleaning</a></li>
+                    <li><a href="{% url 'core:services' %}"><i class="fas fa-chevron-right"></i> Sanitary Services</a></li>
+                    <li><a href="{% url 'core:services' %}"><i class="fas fa-chevron-right"></i> Pest Control</a></li>
+                </ul>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="footer-column">
+                <h4>Contact Info</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>+254 700 000 000</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>info@wakuthiiwaste.co.ke</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Embu Town, Kenya</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span>Mon-Sat: 7:00 AM - 6:00 PM</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; {% now "Y" %} Wakuthii Waste Management. All rights reserved.</p>
+        </div>
+    </div>
+</footer>

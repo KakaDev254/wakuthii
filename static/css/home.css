@@ -1,0 +1,541 @@
+/* static/css/home.css - Sharp Corners, Wave Effect, Thinner Font */
+
+/* ============================================ */
+/* HERO SECTION */
+/* ============================================ */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1a1a1a;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+    padding: 100px 0 80px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 1.1;
+    color: #FFFFFF;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+}
+
+.hero-title span {
+    color: #F2B50B;
+    position: relative;
+    font-weight: 400;
+}
+
+.hero-description {
+    font-size: 1.15rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-buttons .btn-primary {
+    background: #F2B50B;
+    border: none;
+    padding: 14px 35px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: all 0.3s ease;
+    border-radius: 0;
+}
+
+.hero-buttons .btn-primary:hover {
+    background: #ffc107;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(242, 181, 11, 0.3);
+}
+
+/* ============================================ */
+/* WAVE TRANSITION WITH FLOATING CARDS */
+/* ============================================ */
+.wave-transition {
+    position: relative;
+    margin-top: -2px;
+    background: #F8F9FA;
+}
+
+.wave-container {
+    line-height: 0;
+    margin-bottom: -5px;
+}
+
+.wave-container svg {
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+
+.floating-cards {
+    position: relative;
+    z-index: 2;
+    margin-top: -60px;
+    padding-bottom: 40px;
+}
+
+.floating-card {
+    background: #FFFFFF;
+    padding: 35px 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    height: 100%;
+    border: 1px solid #f0f0f0;
+    border-radius: 0;
+}
+
+.floating-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+    border-color: #25671E;
+}
+
+.floating-card-icon {
+    width: 60px;
+    height: 60px;
+    background: #25671E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 0;
+}
+
+.floating-card-icon i {
+    font-size: 1.8rem;
+    color: #FFFFFF;
+}
+
+.floating-card h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+}
+
+.floating-card p {
+    color: #6c757d;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.floating-link {
+    color: #25671E;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.floating-link:hover {
+    color: #1a4f14;
+}
+
+/* ============================================ */
+/* SERVICES SECTION */
+/* ============================================ */
+.services-section {
+    padding: 60px 0 80px;
+    background: #F8F9FA;
+}
+
+.section-tag {
+    display: inline-block;
+    color: #25671E;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #6c757d;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: #FFFFFF;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+    border: 1px solid #f0f0f0;
+    border-radius: 0;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    border-color: #25671E;
+}
+
+.service-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(37, 103, 30, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: all 0.3s ease;
+    border-radius: 0;
+}
+
+.service-card:hover .service-icon {
+    background: #25671E;
+}
+
+.service-icon i {
+    font-size: 1.8rem;
+    color: #25671E;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon i {
+    color: #FFFFFF;
+}
+
+.service-card h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #6c757d;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.service-link {
+    color: #25671E;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.service-link:hover {
+    color: #1a4f14;
+}
+
+/* ============================================ */
+/* SECTORS SECTION */
+/* ============================================ */
+.sectors-section {
+    padding: 80px 0;
+    background: #FFFFFF;
+}
+
+.sector-item {
+    background: #F8F9FA;
+    padding: 20px 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 0;
+}
+
+.sector-item:hover {
+    background: #FFFFFF;
+    border-color: #25671E;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    transform: translateY(-4px);
+}
+
+.sector-item i {
+    font-size: 1.5rem;
+    color: #25671E;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.sector-item span {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+
+/* ============================================ */
+/* ABOUT SECTION */
+/* ============================================ */
+.about-section {
+    padding: 80px 0;
+    background: #F8F9FA;
+}
+
+.about-text {
+    font-size: 1.05rem;
+    color: #6c757d;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.about-features {
+    margin-bottom: 2rem;
+}
+
+.about-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.about-feature i {
+    color: #25671E;
+    font-size: 1.2rem;
+}
+
+.about-feature span {
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+.about-section .btn-primary {
+    background: #25671E;
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-radius: 0;
+}
+
+.about-section .btn-primary:hover {
+    background: #1a4f14;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 103, 30, 0.2);
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.06);
+    border-radius: 0;
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: #FFFFFF;
+    padding: 20px 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    text-align: center;
+    border-radius: 0;
+}
+
+.experience-badge .number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #25671E;
+    display: block;
+    line-height: 1;
+}
+
+.experience-badge .label {
+    font-size: 0.85rem;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+/* ============================================ */
+/* CTA SECTION */
+/* ============================================ */
+.cta-section {
+    padding: 60px 0;
+    background: #F8F9FA;
+    border-top: 1px solid #f0f0f0;
+}
+
+.cta-section h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.cta-section p {
+    color: #6c757d;
+    font-size: 1.05rem;
+    margin-bottom: 0;
+}
+
+.btn-cta {
+    background: #25671E;
+    color: #FFFFFF;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    border-radius: 0;
+}
+
+.btn-cta:hover {
+    background: #1a4f14;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(37, 103, 30, 0.2);
+    color: #FFFFFF;
+}
+
+/* ============================================ */
+/* RESPONSIVE */
+/* ============================================ */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-section {
+        background-attachment: scroll;
+    }
+    
+    .wave-container svg {
+        height: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: auto;
+        padding: 0;
+    }
+    
+    .hero-section .container {
+        padding: 120px 0 60px;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+    
+    .floating-cards {
+        margin-top: -30px;
+    }
+    
+    .floating-card {
+        padding: 25px 20px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .experience-badge {
+        bottom: -10px;
+        right: -10px;
+        padding: 15px 20px;
+    }
+    
+    .experience-badge .number {
+        font-size: 1.8rem;
+    }
+    
+    .cta-section {
+        text-align: center;
+    }
+    
+    .cta-section .text-lg-end {
+        text-align: center !important;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .wave-container svg {
+        height: 40px;
+    }
+    
+    .floating-cards {
+        margin-top: -20px;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .service-card {
+        padding: 30px 20px;
+    }
+    
+    .sector-item {
+        padding: 15px 8px;
+    }
+    
+    .sector-item i {
+        font-size: 1.2rem;
+    }
+    
+    .sector-item span {
+        font-size: 0.75rem;
+    }
+}

@@ -1,0 +1,64 @@
+# .gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+pythonenv*
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+*.sqlite3
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+.ropeproject/
+
+# Testing
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/
+.mypy_cache/
+
+# Deployment
+*.pid
+*.seed
+*.pid.lock
+*.pem
+
+# OS
+Thumbs.db
+.DS_Store
+*.tmp
+
+# Project specific
+staticfiles/
+media/
+*.xlsx
+*.xls
+*.csv
+
+# Railway
+railway.json
