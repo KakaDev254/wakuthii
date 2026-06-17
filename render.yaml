@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: wakuthii
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --noinput
+      python manage.py migrate
+    startCommand: gunicorn waste_management.wsgi
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: wakuthii-db
+          property: connectionString
+      - key: ALLOWED_HOSTS
+        value: "wakuthii.onrender.com"
+
+databases:
+  - name: wakuthii-db
+    plan: free
